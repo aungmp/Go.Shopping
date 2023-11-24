@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/2fa3692359.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  
+    <div class="nav">
+        <div class="left_nav">
+            <p>Sass_Project</p>
+        </div>
+        <div class="right_nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Description</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Email</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="cardOne">
+            <div class="cardHeader">
+                <p>IPhone 15 Pro Max</p>
+                <p>$2500</p>
+            </div>
+            <div class="cardBody">
+                <img src="images/ip.png"  alt="iphone15 Pro max">
+            </div>
+            <div class="cardFooter">
+                <button  > <a href="game.html"> Add To Card</a>
+                </button>
+                <button  > <a href="game.html"> Shop</a>
+                </button>
+            </div>
+        </div>
+        <div class="cardTwo">
+            <div class="cardHeader">
+                <p>Samsaung MX450C</p>
+                <p>$2000</p>
+            </div>
+            <div class="cardBody">
+                <img src="images/sam.jpg" alt="Samsaung picture">
+            </div>
+            <div class="cardFooter">
+                <button  > <a href="game.html"> Add To Card</a>
+                </button>
+                <button  > <a href="game.html"> Shop</a>
+                </button>
+            </div>
+        </div>
+        <div class="cardThree">
+            <div class="cardHeader">
+                <p>Lenovo Y70A</p>
+                <p>$1500</p>
+            </div>
+            <div class="cardBody">
+                <img src="images/lenovo.jpeg" alt="lenovo picture">
+            </div>
+            <div class="cardFooter">
+                <button  > <a href="game.html"> Add To Card</a>
+                </button>
+                <button  > <a href="game.html"> Shop</a>
+                </button>
+            </div>
+        </div>
+        <div class="cardFour">
+            <div class="cardHeader">
+                <p>Ipad Air Pro(second Gen)</p>
+                <p>$3000</p>
+            </div>
+            <div class="cardBody">
+                <img src="images/ipad.jpg" height="90%"="ipad picture">
+            </div>
+            <div class="cardFooter">
+                <button  > <a href="game.html"> Add To Card</a>
+                </button>
+                <button  > <a href="game.html"> Shop</a>
+                </button>
+            </div>
+        </div>
+        <div class="cardFive">
+            <div class="cardHeader">
+                <p>PSI GAMING U3XC</p>
+                <p>$4000</p>
+            </div>
+            <div class="cardBody">
+                <img src="images/gameLap.jpg" alt="game laptop picture">
+            </div>
+            <div class="cardFooter">
+                <button  > <a href="game.html"> Add To Card</a>
+                </button>
+                <button  > <a href="game.html"> Shop</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="cardSection">
+       
+
+    </div>
+
+    <script>
+       let cards=[
+        {"name":"Samsaung","price":"2000$"},
+        {"name":"Hewai","price":"1300$"},
+        {"name":"Iphone","price":"3400$"},
+        {"name":"Sony","price":"2300$"},
+        {"name":"HP","price":"3400$"},
+         
+       ]
+       let electronic="";
+       for(let i=0;i<20;i++){
+
+        electronic +=`
+        <div class="cards">
+        <div class="card_Header">
+            <p> ${cards[i%5] .name}</>
+            <p> ${cards[i%5] .price}</>
+                </div>
+        <div class="card_Body">
+            <figure>
+                <img src="images/${(i%5)+1}.jpeg" alt="" class="card_image">
+            </figure>
+        </div>
+        <div class="card_Footer">
+            <button><i class="fa-solid fa-eye"></i> <a href="game.html">Details</a></button>
+            <button><i class="fa-solid fa-basket-shopping"></i><a href="game.html">Shop</a></button>
+        </div>
+        </div>
+        `
+        document.querySelector(".cardSection").innerHTML =  electronic;
+        // const content = element.innerHTML;
+       }
+        
+    </script>
+</body>
+</html>
