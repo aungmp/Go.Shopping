@@ -1,0 +1,106 @@
+ 
+ .nav{
+     
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: $colorTwo;
+  
+   
+    max-width: 1300px;
+    @include mQ("1080px"){
+        grid-template-columns: 1fr;
+        
+        
+    }
+    
+   
+    
+
+    .left_nav{
+       
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 10px;
+       
+  
+        p{
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 800;
+             color:$colorOne;
+           
+        }
+        @include mQ("900px"){
+        
+        
+            p{
+                 
+                font-size:1.8rem;
+            }
+            
+        }
+    }
+    .right_nav{
+    
+          
+       
+        ul{
+            display: flex;
+            justify-content: center;
+            li{
+                padding: 20px 30px;
+                @include mQ("900px"){
+                    
+                    font-size: 20px;
+                  
+
+                }
+                @include mQ("600px"){
+                    padding: 10px 10px;
+                    font-size: 12px;
+                  
+
+                }
+                @include mQ("300px"){
+                    padding: 8px 8px;
+                    font-size: 9px;
+                  
+
+                }
+                 
+  
+               
+
+                a{
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color:$colorOne;
+                    font-family:Agbalumo ;
+                    &:hover{
+                   
+                        font-weight: 600;
+                        transition: 100ms;
+                       
+                    }
+
+                    &::after{
+                        content:"";
+                        display: block;
+                        border-bottom: 5px solid $colorOne;
+                        transform: scale(0,1);
+                    }
+                    &:hover::after{
+                        
+                        padding-top: 2px;
+                        transform: scale(1,1);
+                        transition: 300ms;
+                    }
+                }
+               
+             
+            }
+        }
+    }
+    
+}

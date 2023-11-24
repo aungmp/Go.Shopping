@@ -1,0 +1,67 @@
+
+
+.section{
+    @extend %fixwrapper;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:5px;
+    min-height: 60vh;
+    
+    @include mQ("1080px"){
+        grid-template-columns: repeat(3,1fr);
+        min-height: 40vh;
+    }
+    @include mQ("912px"){
+        grid-template-columns: repeat(2,1fr);
+        min-height: 35vh;
+    }
+    @include mQ("600px"){
+        grid-template-columns: repeat(1,1fr);
+        min-height: 30vh;
+    }
+
+}
+
+
+
+
+.section>*{
+    @include cards;
+    @include insideDisplayCard;
+   
+    .cardHeader{
+       @include cardHeader;
+   
+    }
+    .cardBody{
+        
+        img{
+            display: block;
+            max-width: 100%;
+            border-radius:10pxb  ;
+            
+        }
+    }
+    .cardFooter{
+       
+         
+        display: flex;
+        
+        
+        
+        button{
+          @extend %botton;
+         
+        
+          
+      
+    }
+}
+    
+ 
+}
+ 
+
+
+
+ 

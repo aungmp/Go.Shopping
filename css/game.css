@@ -1,0 +1,56 @@
+.dd {
+  background-color: rgba(237, 132, 132, 0.822);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .dd h1 {
+    font-size: 1.5rem;
+  }
+  .dd h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dd h1 {
+    font-size: 1rem;
+  }
+  .dd h2 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .dd h1 {
+    font-size: 0.7rem;
+  }
+  .dd h2 {
+    font-size: 1rem;
+  }
+}
+
+button {
+  color: red;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: auto;
+  margin: 5% auto;
+  padding: 1.5% 5%;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 10%;
+}
+button:hover {
+  content: "";
+  background: -webkit-linear-gradient(bottom left, rgb(255, 196, 0), rgb(247, 247, 114));
+  transition: opacity 0.5s linear;
+  font-weight: 600;
+  transition: 100ms;
+}
+button a {
+  text-decoration: none;
+  list-style: none;
+}
+
+/*# sourceMappingURL=game.css.map */

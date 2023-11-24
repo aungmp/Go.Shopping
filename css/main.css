@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit:ital,wght@0,300;0,400;1,400&family=Open+Sans:ital,wght@1,500;1,600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cardSection, .section {
+  max-width: 1200px;
+  margin: 1% auto;
+}
+
+.cardSection .cards .card_Footer button, .section > * .cardFooter button {
+  color: #113946;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: auto;
+  margin: 5% auto;
+  padding: 1.5% 5%;
+  align-items: center;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 10%;
+}
+.cardSection .cards .card_Footer button:hover, .section > * .cardFooter button:hover {
+  content: "";
+  background: -webkit-linear-gradient(bottom left, rgb(255, 196, 0), rgb(247, 247, 114));
+  transition: opacity 0.5s linear;
+  font-weight: 600;
+  transition: 100ms;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #BCA37F;
+  max-width: 1300px;
+}
+@media screen and (max-width: 1080px) {
+  .nav {
+    grid-template-columns: 1fr;
+  }
+}
+.nav .left_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.nav .left_nav p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #113946;
+}
+@media screen and (max-width: 900px) {
+  .nav .left_nav p {
+    font-size: 1.8rem;
+  }
+}
+.nav .right_nav ul {
+  display: flex;
+  justify-content: center;
+}
+.nav .right_nav ul li {
+  padding: 20px 30px;
+}
+@media screen and (max-width: 900px) {
+  .nav .right_nav ul li {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav .right_nav ul li {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .nav .right_nav ul li {
+    padding: 8px 8px;
+    font-size: 9px;
+  }
+}
+.nav .right_nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #113946;
+  font-family: Agbalumo;
+}
+.nav .right_nav ul li a:hover {
+  font-weight: 600;
+  transition: 100ms;
+}
+.nav .right_nav ul li a::after {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #113946;
+  transform: scale(0, 1);
+}
+.nav .right_nav ul li a:hover::after {
+  padding-top: 2px;
+  transform: scale(1, 1);
+  transition: 300ms;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  min-height: 60vh;
+}
+@media screen and (max-width: 1080px) {
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 40vh;
+  }
+}
+@media screen and (max-width: 912px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 35vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 30vh;
+  }
+}
+
+.section > * {
+  background-color: #EAD7BB;
+  margin: 10px 0;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  padding: 10px;
+  gap: 10px;
+}
+.section > * .cardHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: -webkit-linear-gradient(bottom left, rgb(255, 196, 0), rgb(247, 247, 114));
+  transition: opacity 0.5s linear;
+  border-radius: 10px;
+}
+.section > * .cardHeader p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #113946;
+  font-family: Kanit;
+}
+.section > * .cardBody img {
+  display: block;
+  max-width: 100%;
+  border-radius: 10pxb;
+}
+.section > * .cardFooter {
+  display: flex;
+}
+.cardSection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+@media screen and (max-width: 1080px) {
+  .cardSection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 912px) {
+  .cardSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardSection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.cardSection .cards {
+  background-color: #EAD7BB;
+  display: grid;
+  grid-template-rows: 1fr 3.3fr 1fr;
+}
+.cardSection .cards .card_Header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: -webkit-linear-gradient(bottom left, rgb(255, 196, 0), rgb(247, 247, 114));
+  transition: opacity 0.5s linear;
+}
+.cardSection .cards .card_Header p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #113946;
+  font-family: Kanit;
+}
+.cardSection .cards .card_Body {
+  height: auto;
+}
+.cardSection .cards .card_Body img {
+  width: 100%;
+}
+.cardSection .cards .card_Footer {
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */

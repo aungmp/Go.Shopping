@@ -1,0 +1,28 @@
+%fixwrapper{
+    max-width: 1200px;
+    margin:1%  auto;
+    
+}
+
+%botton{
+    color:$colorOne;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    margin:5% auto;
+    padding:1.5% 5%;
+    align-items: center;
+    font-size: 0.9rem;
+    display: flex;
+    gap:10%;
+
+     &:hover{
+        content:"";
+        background: -webkit-linear-gradient(bottom left,rgb(255, 196, 0),rgb(247, 247, 114));
+        transition: opacity 0.5s linear;
+        font-weight: 600;
+        transition: 100ms;
+      
+    }
+}

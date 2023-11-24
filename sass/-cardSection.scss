@@ -1,0 +1,60 @@
+ 
+.cardSection{
+   
+    @extend %fixwrapper;
+   
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:5px;
+    @include mQ("1080px"){
+        grid-template-columns: repeat(3,1fr);
+         
+    }
+    @include mQ("912px"){
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    @include mQ("600px"){
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    
+
+    .cards{
+
+    
+        
+     
+        background-color: $colorThree;
+        display: grid;
+        grid-template-rows: 1fr 3.3fr 1fr;
+
+        .card_Header{
+            @include secondHeader;
+        }
+
+        .card_Body{
+            height: auto;
+            img{
+                width:100%;
+                
+            }
+         }
+         .card_Footer{
+            
+            
+             
+            display: flex;
+             
+            button{
+              
+                @extend %botton;
+               
+                
+            }
+         }
+
+    }
+  
+
+}

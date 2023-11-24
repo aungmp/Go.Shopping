@@ -1,0 +1,68 @@
+ 
+@mixin scr($args){
+    @media screen and (max-width:$args) {
+        @content;
+
+    }
+
+}
+
+.dd{
+    background-color:rgba(237, 132, 132, 0.822);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include scr(900px){
+        h1{
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+    @include scr(600px){
+        h1{
+            font-size: 1rem;
+        }
+        h2{
+            font-size: 1.3rem;
+        }
+    }
+    @include scr(300px){
+        h1{
+            font-size: 0.7rem;
+        }
+        h2{
+            font-size: 1rem;
+        }
+    }
+     
+    
+}
+button{
+    color:red;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    margin:5% auto;
+    padding:1.5% 5%;
+   
+    font-size: 0.9rem;
+    display: flex;
+    gap:10%;
+
+     &:hover{
+        content:"";
+        background: -webkit-linear-gradient(bottom left,rgb(255, 196, 0),rgb(247, 247, 114));
+        transition: opacity 0.5s linear;
+        font-weight: 600;
+        transition: 100ms;
+      
+    }
+
+    a{
+        text-decoration: none;
+    list-style:none;
+    }
+}
